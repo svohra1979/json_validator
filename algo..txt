@@ -1,0 +1,11 @@
+Algo outline
+
+Set up a textarea where the user pastes/types their JSON.
+Set up a button to trigger validation.
+On click, grab the textarea's value as a string.
+Try to run it through JSON.parse().
+If it succeeds — no error was thrown — show a "Valid JSON" message, styled green.
+If it fails — an error is thrown — catch that error, extract its message, and show "Invalid JSON" plus the error detail, styled red.
+Use try/catch to handle both outcomes, since JSON.parse() doesn't return true/false, it just throws when the input is broken.
+Optionally, if valid, use JSON.stringify(parsedData, null, 2) to pretty-print the formatted JSON back into a result box — shows the user their JSON cleaned up and indented.
+Clear the previous result message each time before showing a new one, so old messages don't stack up.
